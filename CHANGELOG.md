@@ -1,3 +1,87 @@
+### 1.2.2: Maintenance Release
+
+Editor
+
+ - Prevent node z property getting set to 0 or ""
+ - Only apply z-recovery logic to flow nodes
+ - Fix api call to reload flows Fixes #2726
+ - Remove bad z property from import config nodes
+
+### 1.2.1: Maintenance Release
+
+Runtime
+
+ - Fix race condition in .config file migration Fixes #2724
+
+
+### 1.2.0: Milestone Release
+
+Editor
+
+ - Fix selection of link node not existing within active workspace #2722 (@HiroyasuNishiyama)
+ - Fix import of merged flow
+ - Fix width of upload button in Safari #2718 (@HiroyasuNishiyama)
+ - Update Chinese translations #2719 (@JiyeYu)
+ - Update Japanese translations needed for 1.2 #2710 (@kazuhitoyokoi)
+ - Fix unexpected line break of sidebar tab name popover #2716 (@HiroyasuNishiyama)
+ - i18n module refresh tooltip #2717 (@HiroyasuNishiyama)
+ - Add better error message if context file gets corrupted
+ - Update info text of function node #2714 (@HiroyasuNishiyama)
+ - Use markdown editor if editText called with md mode
+ - Prevent group actions when in non-default mouse mode
+
+### 1.2.0-beta.1: Beta Release
+
+Editor
+
+ - Detect importing duplicate nodes and help user resolve #2698
+ - Allow sidebar tabs to be reordered #2655
+ - Add tgz upload button to palette manager #2682
+ - Add 'automatic' git workflow for projects #2035
+ - Allow project version string to be edited
+ - Sanitize unknown node type when displaying
+ - Handle nodes with invalid z property Closes #2170
+ - Outline: Ensure sf instance nodes update in outliner when import-replace sf
+ - Outline: Ensure recovered nodes tab is added to outliner properly
+ - Groups: Only recalculate group label offsets when needed
+ - Groups: Reuse first group name/style when merging elements Fixes #2680
+ - Groups: Fix copy/paste of node into active group Fixes #2686
+ - ACE: Update ACE to 1.4.12-src-min-noconflict Fixes #1988
+ - ACE: Add comment highlighting to JSONata and fix regex handling Closes #2701
+ - ACE: Ensure errors in ACE NRJavaScript mode are on valid lines
+ - Prevent Enter on search box from reloading page Fixes #2678
+ - Allow toggleButton icons to be optional
+ - Allow treeList to have a header component
+ - Disable selection of FA icons when dbl clicking node
+
+Runtime
+
+ - Add RED.hooks API for pluggable routing #2665
+ - Add flows:* events and deprecate nodes-* events
+ - Split .config.json into separate files #2794
+ - Add support for file upload in /nodes api #2682
+ - Add 'done' metric log for message tracing #2685 (@k-toumura)
+ - Add mutex locking around /flow apis #2679
+ - Default flowFilePretty to true if projects enabled
+ - Replace Math.random with crypto.getBytes for session tokens
+ - Fix `this` context when calling multiple event listeners Fixes #2692. #2693 (@mgroenhoff)
+ - Add --userDir=/tmp/foo support to grunt dev
+ - Skip loading node html if disableEditor set #2684
+ - Update util.writeFile to write to tmp file before rename #2683
+ - Fix getModuleFiles function to include path property #2705 (@t-kawamorita)
+ - Update nodemon to latest so grunt dev task behaves
+ - Improve jsdoc of util.getObjectProperty to clarify thrown error See #2703
+
+Nodes
+
+ - Trigger: allow msg.delay to be used to set delay/loop interval #2707
+ - Function: allow to send & log in its initialize code #2644 (@cinhcet)
+ - MQTT: Update to MQTT 4.2.1 Closes #2694
+ - Debug: Handle undefined value in Debug view of Array and Object Fixes #2696
+ - Switch: Clarify empty rules in switch node documentation #2649 (@natcl) #2669 (@kazuhitoyokoi)
+ - Updated core nodes to use Done callback #2653 (@k-toumura)
+     - yaml,  xml, json, html, http, template, range, link, status, catch, complete, inject
+
 ### 1.1.3: Maintenance Release
 
 Editor
